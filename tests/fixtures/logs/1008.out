@@ -1,0 +1,3 @@
+[rank0] world_size=8 master=gpu-node-01:29500
+[rank1] world_size=8 master=gpu-node-01:29500
+[rank4] world_size=8 master=gpu-node-01:29500

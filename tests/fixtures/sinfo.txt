@@ -1,0 +1,7 @@
+PARTITION AVAIL TIMELIMIT NODES STATE GRES
+cpu* up 2-00:00:00 40 idle (null)
+cpu* up 2-00:00:00 12 mix (null)
+gpu up 1-00:00:00 6 idle gpu:a100:4
+gpu up 1-00:00:00 8 alloc gpu:a100:4
+gpu-long up 7-00:00:00 2 idle gpu:a100:4
+debug up 00:30:00 2 idle gpu:a100:1

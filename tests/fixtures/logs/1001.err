@@ -1,0 +1,3 @@
+/home/arman/.venv/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total.
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=1001.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.
+slurmstepd: error: *** JOB 1001 ON gpu-node-07 CANCELLED AT 2026-09-20T09:56:52 DUE TO PREEMPTION OOM ***

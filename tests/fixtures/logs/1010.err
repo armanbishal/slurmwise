@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/arman/acts/dump.py", line 61, in <module>
+    np.save(path, acts)
+  File "/home/arman/.venv/lib/python3.11/site-packages/numpy/lib/npyio.py", line 544, in save
+    format.write_array(fid, arr, allow_pickle=allow_pickle,
+OSError: [Errno 122] Disk quota exceeded

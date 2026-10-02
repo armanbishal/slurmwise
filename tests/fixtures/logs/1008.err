@@ -1,0 +1,9 @@
+gpu-node-02:41120:41120 [0] NCCL INFO Bootstrap : Using ib0:10.10.1.2<0>
+gpu-node-02:41120:41231 [0] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.10.1.1<29501> failed : No route to host
+gpu-node-02:41120:41231 [0] NCCL INFO transport/net_socket.cc:...
+Traceback (most recent call last):
+  File "/home/arman/pretrain/train.py", line 210, in <module>
+    dist.init_process_group("nccl", timeout=timedelta(minutes=10))
+torch.distributed.DistBackendError: NCCL error in: ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1970, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.21.5
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error.
+srun: error: gpu-node-02: task 4: Exited with exit code 1

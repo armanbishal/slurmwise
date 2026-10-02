@@ -1,0 +1,6 @@
+Loading checkpoint shards: 100%|██████████| 3/3 [00:41<00:00, 13.8s/it]
+Tokenizing dataset: 100%|██████████| 52000/52000 [01:02<00:00]
+Step 10/2000 loss=2.4131 lr=1.9e-05
+Step 20/2000 loss=2.2018 lr=2.0e-05
+Step 30/2000 loss=2.1534 lr=2.0e-05
+Building eval batches (packing 4096 tokens/seq, num_workers=8)...

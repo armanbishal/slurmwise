@@ -1,0 +1,77 @@
+[
+  {"id": "oom-cgroup", "kind": "oom", "doc": "oom", "state": "OUT_OF_MEMORY",
+   "log": "slurmstepd: error: Detected 1 oom-kill event(s) in StepId=1001.batch. Some of your processes may have been killed by the cgroup out-of-memory handler."},
+  {"id": "oom-killed-process", "kind": "oom", "doc": "oom", "state": "FAILED",
+   "log": "Out of memory: Killed process 44213 (python) total-vm:68352200kB, anon-rss:33216012kB"},
+  {"id": "oom-memoryerror", "kind": "oom", "doc": "oom", "state": "FAILED",
+   "log": "Traceback (most recent call last):\n  File \"train.py\", line 88, in load\n    data = np.concatenate(chunks)\nMemoryError"},
+
+  {"id": "cuda-oom-torch", "kind": "cuda_oom", "doc": "cuda_oom", "state": "FAILED",
+   "log": "torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 39.56 GiB of which 1.12 GiB is free."},
+  {"id": "cuda-oom-alloc", "kind": "cuda_oom", "doc": "cuda_oom", "state": "FAILED",
+   "log": "RuntimeError: CUDA out of memory. Tried to allocate 512.00 MiB (GPU 0; 23.70 GiB total capacity; 22.1 GiB already allocated)"},
+
+  {"id": "timelimit-slurm", "kind": "time_limit", "doc": "time_limit", "state": "TIMEOUT",
+   "log": "slurmstepd: error: *** JOB 1002 ON cpu-node-12 CANCELLED AT 2026-09-21T18:02:33 DUE TO TIME LIMIT ***"},
+  {"id": "timelimit-state-only", "kind": "time_limit", "doc": "time_limit", "state": "TIMEOUT",
+   "log": "epoch 7/20 loss=0.81\nepoch 8/20 loss=0.78"},
+
+  {"id": "cuda-assert", "kind": "cuda_error", "doc": "cuda_error", "state": "FAILED",
+   "log": "../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: Assertion `srcIndex < srcSelectDimSize` failed.\nRuntimeError: CUDA error: device-side assert triggered"},
+  {"id": "cuda-no-kernel", "kind": "cuda_error", "doc": "cuda_error", "state": "FAILED",
+   "log": "RuntimeError: CUDA error: no kernel image is available for execution on the device"},
+
+  {"id": "import-missing", "kind": "import_error", "doc": "import_error", "state": "FAILED",
+   "log": "Traceback (most recent call last):\n  File \"train.py\", line 9, in <module>\n    from unsloth import FastLanguageModel\nModuleNotFoundError: No module named 'unsloth'"},
+  {"id": "import-cannot-import", "kind": "import_error", "doc": "import_error", "state": "FAILED",
+   "log": "ImportError: cannot import name 'GRPOTrainer' from 'trl'"},
+
+  {"id": "nccl-route", "kind": "nccl", "doc": "nccl", "state": "FAILED",
+   "log": "gpu-node-02:41120:41231 [0] NCCL WARN socketStartConnect: Connect to 10.10.1.1<29501> failed : No route to host\ntorch.distributed.DistBackendError: NCCL error"},
+  {"id": "nccl-system", "kind": "nccl", "doc": "nccl", "state": "FAILED",
+   "log": "ncclSystemError: System call (e.g. socket, malloc) or external library call failed, NCCL version 2.21.5"},
+
+  {"id": "nodefail-slurm", "kind": "node_fail", "doc": "node_fail", "state": "NODE_FAIL",
+   "log": "slurmstepd: error: *** JOB 1009 ON gpu-node-09 CANCELLED AT 2026-09-24T03:33:09 DUE TO NODE FAILURE, SEE SLURMCTLD LOG FOR DETAILS ***"},
+
+  {"id": "disk-quota", "kind": "disk_quota", "doc": "disk_quota", "state": "FAILED",
+   "log": "OSError: [Errno 122] Disk quota exceeded"},
+  {"id": "disk-nospace", "kind": "disk_quota", "doc": "disk_quota", "state": "FAILED",
+   "log": "OSError: [Errno 28] No space left on device"},
+
+  {"id": "perm-denied", "kind": "permission", "doc": "disk_quota", "state": "FAILED",
+   "log": "PermissionError: [Errno 13] Permission denied: '/projects/shared/out/model.pt'"},
+
+  {"id": "notfound", "kind": "file_not_found", "doc": "general", "state": "FAILED",
+   "log": "FileNotFoundError: [Errno 2] No such file or directory: 'configs/shaped.yaml'"},
+
+  {"id": "module-load", "kind": "module_load", "doc": "import_error", "state": "FAILED",
+   "log": "Lmod has detected the following error: The following module(s) are unknown: \"cuda/12.4\""},
+
+  {"id": "segfault", "kind": "segfault", "doc": "general", "state": "FAILED",
+   "log": "Fatal Python error: Segmentation fault\n/var/spool/slurmd/job.sh: line 12: 41820 Segmentation fault (core dumped) python train.py"},
+
+  {"id": "cuda-oom-after-traceback", "kind": "cuda_oom", "doc": "cuda_oom", "state": "FAILED",
+   "log": "Traceback (most recent call last):\n  File \"train.py\", line 200, in <module>\n    main()\n  File \"trainer.py\", line 1188, in _generate\n    out = model.generate(**inputs)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB."},
+  {"id": "oom-exit125", "kind": "oom", "doc": "oom", "state": "OUT_OF_MEMORY",
+   "log": "epoch 2 step 400 loss 1.9\nsrun: error: gpu-node-03: task 0: Out Of Memory"},
+  {"id": "nccl-timeout-hang", "kind": "nccl", "doc": "nccl", "state": "FAILED",
+   "log": "Watchdog caught collective operation timeout: WorkNCCL(SeqNum=12, OpType=ALLREDUCE) ran for 1800000 milliseconds before timing out\nNCCL error"},
+  {"id": "ambiguous-cuda-oom-vs-error", "kind": "cuda_oom", "doc": "cuda_oom", "state": "FAILED",
+   "log": "RuntimeError: CUDA error: out of memory\nCUDA kernel errors might be asynchronously reported at some other API call."},
+
+  {"id": "qos-maxjobs", "kind": "qos_limit", "doc": "qos_limit", "state": "PENDING",
+   "log": "sbatch: Reason=QOSMaxJobsPerUserLimit JobState=PENDING"},
+  {"id": "qos-invalid", "kind": "qos_limit", "doc": "qos_limit", "state": "FAILED",
+   "log": "sbatch: error: Batch job submission failed: Invalid qos specification"},
+  {"id": "alloc-billing", "kind": "allocation_exhausted", "doc": "allocation_exhausted", "state": "PENDING",
+   "log": "JobState=PENDING Reason=AssocGrpBillingMinutes"},
+  {"id": "alloc-sus", "kind": "allocation_exhausted", "doc": "allocation_exhausted", "state": "FAILED",
+   "log": "sbatch: error: your account is out of remaining service units for this allocation"},
+  {"id": "dep-never", "kind": "dependency", "doc": "dependency", "state": "CANCELLED",
+   "log": "JobState=CANCELLED Reason=DependencyNeverSatisfied Dependency=afterok:22510001"},
+  {"id": "resources-notavail", "kind": "resources_unavailable", "doc": "resources_unavailable", "state": "PENDING",
+   "log": "JobState=PENDING Reason=ReqNodeNotAvail, UnavailableNodes:gpua[01-04]"},
+  {"id": "resources-badconfig", "kind": "resources_unavailable", "doc": "resources_unavailable", "state": "FAILED",
+   "log": "sbatch: error: Batch job submission failed: Requested node configuration is not available"}
+]

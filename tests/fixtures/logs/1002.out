@@ -1,0 +1,10 @@
+[bench] 878 problems, 20 models, 5 repeats each
+[bench] rapl: package-0 + dram-0 available
+[bench] progress 120/878 (13.7%) elapsed 0:32:10 eta 3:23:00
+[bench] progress 240/878 (27.3%) elapsed 1:05:40 eta 2:54:00
+[bench] progress 360/878 (41.0%) elapsed 1:39:02 eta 2:22:00
+[bench] progress 480/878 (54.7%) elapsed 2:12:44 eta 1:50:00
+[bench] progress 600/878 (68.3%) elapsed 2:46:00 eta 1:17:00
+[bench] progress 720/878 (82.0%) elapsed 3:19:30 eta 0:43:00
+[bench] progress 840/878 (95.7%) elapsed 3:53:11 eta 0:10:00
+slurmstepd: error: *** JOB 1002 ON cpu-node-12 CANCELLED AT 2026-09-21T18:02:33 DUE TO TIME LIMIT ***

@@ -1,0 +1,6 @@
+Unsloth: Will patch your computer to enable 2x faster free finetuning.
+==((====))==  Unsloth 2026.1.2: Fast Granite patching. Transformers: 5.7.0.
+   \\   /|    GPU: NVIDIA A100-SXM4-40GB. Max memory: 39.564 GB. Platform: Linux.
+Loading dataset spider train: 7000 rows
+GRPO: num_generations=8 max_completion_length=512 per_device_train_batch_size=8
+  0%|          | 0/1000 [00:00<?, ?it/s]

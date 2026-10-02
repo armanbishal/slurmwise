@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/arman/t2sql/scripts/train_grpo.py", line 142, in <module>
+    main()
+  File "/home/arman/t2sql/scripts/train_grpo.py", line 137, in main
+    trainer.train()
+  File "/home/arman/.venv/lib/python3.11/site-packages/transformers/trainer.py", line 2245, in train
+    return inner_training_loop(
+  File "/home/arman/.venv/lib/python3.11/site-packages/trl/trainer/grpo_trainer.py", line 1188, in _generate_and_score_completions
+    prompt_completion_ids = unwrapped_model.generate(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 39.56 GiB of which 1.12 GiB is free. Including non-PyTorch memory, this process has 38.43 GiB memory in use. Of the allocated memory 36.90 GiB is allocated by PyTorch, and 812.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.

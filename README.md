@@ -1,4 +1,4 @@
-<h1 align="center">SlurmPilot: An LLM Agent for HPC Job Monitoring</h1>
+<h1 align="center">SlurmWise: An LLM Agent for HPC Job Monitoring</h1>
 
 <p align="center">
   <img alt="Python" src="https://img.shields.io/badge/python-3.10%2B-blue">
